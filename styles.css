@@ -1,0 +1,174 @@
+/* CSS PROJETO ALURA PLUS */
+
+:root { 
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'inter'; 
+} /* Usa o root pra criar variavel */ 
+
+
+body { 
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal); /* Definindo a familia do body, fonte adicionada na variavel */
+    font-size: 16px; /* O tamanho padrão, ou mais usado na pagina */
+    font-weight: 400; /* A força da fonte mais usada na pagina */
+} /* Para usar var(), simples! */
+
+* { 
+    padding: 0;
+    margin: 0;
+} /* Resetar CSS, usar o * que pega os elementos. Ou usar o reset.css (acho melhor) */
+
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: none;
+    background-size: contain;
+    align-items: center; /* alinhar itens, botões e imagens(só nao alinha text */
+    text-align: center; /* alinha o texto e também varios itens */
+} /* Como a imagme é só fundo, sem infos, upamos ela aqui no CSS
+     Não repetir a imagem de fundo(se nao fica completando toda a pagina)
+     Size pra dizer que a imagem usara o tomanho do container, definido aqui em baixo*/
+
+.container { /* Class criada con container, definindo o container principal*/
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+} /* vh = altura da tela do despositivo (tela inteira da pg) !"tem que ter o meta de scala no head"! */
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;  /* curva na borda, em pixels*/
+    padding: 1em; /* Espaçamento interno para dar tamanho ao botão */
+    color: var(--branco-principal); /* cor do texto */
+    display: block; /* block para ele ocupar toda a "linha" que estiver. ao contrario, como ja veio é inline */
+    text-decoration: none; /* Tirar a decoração do texto, do link */
+    margin-bottom: 1em;
+}
+
+.botao-secundario {
+    background-color: transparent; /* além de cor, podemos deixar transparente */
+    border: 1px solid var(--branco-principal) /* Como ficou transparente, criamos borda: espeçura, tipo, cor */
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario)
+}
+
+/* SEGUNDA SECTION */
+
+.secundario__imagem {
+    width: 80%; /* Tamanho dentro do box que a imagem terá */
+}
+
+.secundario {
+    align-items: center; /* Alinhar itens (nao alinha texto) */
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+/* TERCEIRA SECTION */
+
+.secundario__botao {
+    display: inline-block; /* o inlinebloc, bloqueia o tamanho do centeudo, e tambei deixa inline */
+    margin-top: 1em;
+    align-items: center;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+/* QUARTA SECTION */
+
+.dispositivos__lista {
+    display: flex; /* Deixando itens lista alinhados horiz */
+    justify-content: center; /* Centralizando itens da lista */
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 40px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 30px;
+    color: var(--branco-principal);
+}
+
+/* FOOTER - RODAPE */
+.rodape {
+    text-align: center;
+    align-items: center;
+}
+
+.rodape__logo {
+    display: flex;
+    justify-content: center;
+    margin: auto auto;
+}
+
+.rodape__lista {     /* PADRAO PARA LISTAS EM MENU */
+    display: flex; 
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.item__link {
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    font-size: 14px;
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+}
+
+.item__link:hover {  /* :hover (quando o mouse estiver em cima do item) */
+    color: var(--botao-azul);  /* ira trocar a cor */
+}
+
+.item__link:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    transform: scale(1.1);
+    font-size: 17px;
+    transition: 2ms;
+}

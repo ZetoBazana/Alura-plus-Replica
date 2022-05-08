@@ -1,0 +1,57 @@
+<!DOCTYPE html>  
+    <!-- Definir que é html -->
+
+<html lang="pt-br">
+    <!-- Abrir o html, usando leng para lingua -->
+
+    <head> <!-- Head é dados para o arquivo, metas, importações, titulos...-->
+
+        <meta charset="UTF-8"> 
+            <!-- Meta charset é para definir dicionario de caracteres -->
+
+        <meta name="viewport" content="whidt-device-width, initial-scale=1">
+            <!-- Meta do tamanho responsivel, começa em 1 em cada despositivo -->
+
+        <link rel="stylesheet" href="styles.css">  
+            <!-- Inporta usando link o arquivo css, sempre igual, mudando só o nome do arquivo desejado -->
+
+        <title>Alura Plus</title>
+            <!-- Titulo da Pagina, que aparece na aba e dados -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+            <!-- Link das fontes selecionadas no google fonts. elas tem peso 400, 700 usadas nesse projeto -->
+
+    </head>
+
+    <body> <!--Body é a parte de todo conteudo, head = info e body = conteúdo-->
+
+        <section class="container principal">
+            <!-- Ao definir a classe, tambem definimos um container -->
+            <!-- CONTAINER são blocos de conteudo, facil de manusear, e definir -->
+            <div class="container__caixa">
+            <!-- Criamos a div pra usar o display GRID -->
+
+                <h1>Com o Combo+, você pode aproveitar a Alura+ e o Alura Língua por um preço único.</h1>
+                <!-- h1 é o titulo, lembrando que tem 6 niveis de importancia(h1, h2.....h6) -->
+
+                <img src="img/Combo.png" alt="O combo+ é a junção do alura+ e o alura lingua">
+                <!-- Inportação da imagem do combo, sempre src="local/nome.ext" -->
+                <!-- alt="Descrição da imagem, serve para quando nao carregar e também acessibilidade leitor de tela" -->
+
+                <a href="http://www.alura.com.br" class="container__botao">Assine por 12x de R$ 120,00*</a>
+                <a href="http://www.alura.com.br" class="container__botao botao-secundario">Assinar somente o Alura+</a>
+                <!-- Criamos u link, para usar como botão(o botao sera feito pelo CSS) -->
+                <!-- Se o botão não executa uma função ou comando, sendo só link, usamos o a. Se é função aí sim usamos o bottom -->
+                <!-- container__botao (aqui __ é o link pra ele ser "filho do container" igual o segundo que vem do container, padrao do botao e o nome dele mesmo) -->
+                
+                <p class="container__aviso">*O preço pode variar caso a assinatura seja feita em outros planos.</p>
+                <!-- mesmo caso do container__ pra ele estar dentro do container -->
+
+            </div>
+        </section>
+
+    </body>
+
+</html>
